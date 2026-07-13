@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(artifact-design)",
+      "Skill(artifact-design:*)",
+      "Bash(cd /Users/amarolatoja/Proyectos/Ciclo17/GreenMip.v2/src/components && echo \"=== HEX COLORS ===\" && grep -ohE '#[0-9a-fA-F]{3,8}' *.svelte ../app.css | sort | uniq -c | sort -rn && echo \"=== ARBITRARY TEXT SIZES ===\" && grep -ohE 'text-\\\\[[0-9.]+px\\\\]' *.svelte | sort | uniq -c | sort -rn && echo \"=== TRACKING ===\" && grep -ohE 'tracking-\\\\[[0-9.-]+px\\\\]' *.svelte | sort | uniq -c | sort -rn && echo \"=== LEADING ===\" && grep -ohE 'leading-\\\\[[0-9.]+px\\\\]' *.svelte | sort | uniq -c | sort -rn && echo \"=== ROUNDED ===\" && grep -ohE 'rounded\\(-[a-z]+\\)?\\(-\\\\[[0-9.]+px\\\\]\\)?' *.svelte | sort | uniq -c | sort -rn && echo \"=== GAP ===\" && grep -ohE 'gap-\\\\[[0-9.]+px\\\\]' *.svelte | sort | uniq -c | sort -rn && echo \"=== SHADOW ARBITRARY ===\" && grep -ohE 'shadow-\\\\[[^]]+\\\\]' *.svelte | sort -u && echo \"=== W/H ARBITRARY ===\" && grep -ohE '[wh]-\\\\[[0-9.]+px\\\\]' *.svelte | sort | uniq -c | sort -rn)",
+      "Read(//Users/amarolatoja/Proyectos/Ciclo17/**)",
+      "Bash(npm run *)",
+      "Bash(timeout 8 npm run dev -- --port 5183)",
+      "Bash(curl -s http://localhost:5183/)",
+      "Bash(curl -s http://localhost:5183/src/main.js -o /dev/null -w \"main.js status: %{http_code}\\\\n\")",
+      "Read(//tmp/**)",
+      "Bash(curl -s \"http://localhost:5183/src/main.js\" -o /dev/null -w \"main.js: %{http_code}\\\\n\")",
+      "Bash(curl -s \"http://localhost:5183/src/App.svelte\" -o /dev/null -w \"App.svelte: %{http_code}\\\\n\")",
+      "Read(//private/tmp/**)",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(npx --yes playwright --version)",
+      "Bash(curl -sf http://localhost:5190)",
+      "Bash(break)",
+      "Bash(npx --yes playwright install chromium --with-deps)",
+      "Bash(node \"/private/tmp/claude-501/-Users-amarolatoja-Proyectos-Ciclo17-GreenMip-v2/722de13b-3eb6-454d-a9e2-62ec882a74fd/scratchpad/screenshot.mjs\")",
+      "Bash(npm init *)",
+      "Bash(npm install *)",
+      "Bash(node screenshot.mjs)",
+      "Bash(cat \"/temp/readonly/Bash tool output \\(g3fr94\\)\" 2>&1 | head -100)",
+      "Read(//temp/readonly/**)",
+      "Bash(curl -sf http://localhost:5191)"
+    ]
+  }
+}

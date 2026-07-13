@@ -4,8 +4,10 @@
 @theme {
   --color-greenmip-forest: #223f30;
   --color-greenmip-bright: #83fc88;
+  --color-greenmip-sage: #838a68;
   --color-greenmip-olive: #656d51;
   --color-greenmip-gray: #6a7466;
+  --color-greenmip-border: #c8d3ad;
   --color-greenmip-dark-bg: #365c48;
   --color-greenmip-light-bg: #fefffb;
   --color-greenmip-card-bg: #ffffff;

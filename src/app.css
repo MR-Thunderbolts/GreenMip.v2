@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  --color-greenmip-forest: #223f30;
+  --color-greenmip-bright: #83fc88;
+  --color-greenmip-olive: #656d51;
+  --color-greenmip-gray: #6a7466;
+  --color-greenmip-dark-bg: #365c48;
+  --color-greenmip-light-bg: #fefffb;
+  --color-greenmip-card-bg: #ffffff;
+  --font-krub: "Krub", "Inter", sans-serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-krub);
+  background-color: var(--color-greenmip-light-bg);
+  color: var(--color-greenmip-forest);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f8f9f6;
+}
+::-webkit-scrollbar-thumb {
+  background: #c8d3ad;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #656d51;
+}

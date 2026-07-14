@@ -25,7 +25,9 @@
       "Bash(node screenshot.mjs)",
       "Bash(cat \"/temp/readonly/Bash tool output \\(g3fr94\\)\" 2>&1 | head -100)",
       "Read(//temp/readonly/**)",
-      "Bash(curl -sf http://localhost:5191)"
+      "Bash(curl -sf http://localhost:5191)",
+      "Bash(node hero-check.mjs)",
+      "Bash(node final-qa.mjs)"
     ]
   }
 }

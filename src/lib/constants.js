@@ -1,8 +1,8 @@
 export const CONTACT = {
-  phoneDisplay: '+56 9 0000 0000',
-  phoneDial: '+56900000000',
-  whatsappNumber: '56900000000',
-  email: 'contacto@example.com',
+  phoneDisplay: '+56 9 23960489',
+  phoneDial: '+56923960489',
+  whatsappNumber: '56923960489',
+  email: 'isaacvera@greenmip.cl',
 };
 
 export function whatsappUrl(message) {

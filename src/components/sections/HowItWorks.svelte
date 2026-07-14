@@ -12,7 +12,7 @@
       <h2 class="font-inter font-bold text-[26px] md:text-[32px] leading-[32px] md:leading-[40px] text-greenmip-forest tracking-[-0.03em]">
         {howItWorks.title}
       </h2>
-      <p class="font-krub text-greenmip-gray text-lg md:text-xl leading-[28px]">
+      <p class="font-krub text-greenmip-olive text-lg md:text-xl leading-[28px]">
         {howItWorks.subtitle}
       </p>
     </div>
@@ -23,24 +23,20 @@
         <div class="flex flex-col justify-between bg-white border border-greenmip-border/30 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-greenmip-sage/40 transition-all duration-300">
 
           <!-- Text Content -->
-          <div class="flex flex-col gap-4 items-start mb-6">
-            <!-- Step Number and Title -->
-            <div class="flex gap-3 items-start w-full">
-              <span class="font-inter font-normal text-greenmip-gray text-base tracking-[0.06em] uppercase pt-1">
-                {step.num}
-              </span>
-              <div class="flex flex-col gap-4">
-                <h3 class="font-inter font-bold text-xl text-greenmip-forest leading-[24px]">
-                  {step.title}
-                </h3>
-                <p class="font-krub text-greenmip-gray text-base leading-[24px]">
-                  {step.body}
-                </p>
-              </div>
-            </div>
+          <div class="flex flex-col gap-3 items-start mb-6">
+            <!-- Step Number -->
+            <span class="font-inter font-bold text-greenmip-olive text-xs tracking-[0.06em]">
+              {step.num}
+            </span>
+            <h3 class="font-inter font-bold text-xl text-greenmip-forest leading-[24px]">
+              {step.title}
+            </h3>
+            <p class="font-krub text-greenmip-olive text-base leading-[24px]">
+              {step.body}
+            </p>
 
             <!-- Tags -->
-            <div class="flex flex-wrap gap-2 mt-2 ml-7">
+            <div class="flex flex-wrap gap-2 mt-2">
               {#each step.tags as tag}
                 <Tag label={tag} kind="chip" />
               {/each}

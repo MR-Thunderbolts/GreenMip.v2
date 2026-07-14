@@ -1,10 +1,10 @@
 export const advantages = {
   eyebrow: 'NUESTRAS VENTAJAS',
-  title: 'Lorem ipsum dolor sit amet',
-  subtitle: 'Consectetur adipiscing elit sed do eiusmod.',
+  title: 'Protegiendo la rentabilidad de tu cultivo',
+  subtitle: 'Dedicado exclusivamente al Manejo Integrado de Plagas.',
   items: [
-    { title: 'Lorem ipsum', body: 'Dolor sit amet consectetur adipiscing elit sed do.' },
-    { title: 'Dolor sit amet', body: 'Consectetur adipiscing elit sed do eiusmod tempor.' },
-    { title: 'Consectetur elit', body: 'Sed do eiusmod tempor incididunt ut labore dolore.' },
+    { title: '+ 13 años de experiencia', body: 'Experiencia comprobada en MIP en diferentes cultivos.' },
+    { title: '+ 1600 monitoreos', body: 'Realizados con georreferencia GPS exacta en diferentes tipos de cultivos.' },
+    { title: 'Cobertura IV - IX', body: 'En las principales zonas agrícolas de Chile.' },
   ],
 };

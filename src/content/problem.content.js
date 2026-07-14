@@ -1,23 +1,23 @@
 export const problem = {
   tag: 'EL PROBLEMA',
-  title: 'Lorem ipsum dolor sit amet consectetur adipiscing',
+  title: 'Sin datos precisos no puedes controlar tus plagas',
   learnMoreLabel: 'Saber más',
-  image: { src: '/assets/placeholder-image.svg', alt: 'Imagen de referencia' },
+  image: { src: '/assets/problem-main.png', alt: 'Muestra de plaga no controlada' },
   points: [
     {
-      icon: '/assets/problem-icon1.svg',
-      title: 'Lorem ipsum dolor',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.',
+      icon: 'schedule',
+      title: 'Aplicaciones tardías',
+      body: 'No detectar a tiempo los estadíos más susceptibles, reduce la efectividad del control.',
     },
     {
-      icon: '/assets/problem-icon2.svg',
-      title: 'Sit amet consectetur',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.',
+      icon: 'content_copy',
+      title: 'Información dispersa',
+      body: 'Sin datos claros y georreferenciados, el control se vuelve ineficiente y muy costoso.',
     },
     {
-      icon: '/assets/problem-icon3.svg',
-      title: 'Adipiscing elit sed',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.',
+      icon: 'warning',
+      title: 'Rechazos de exportación',
+      body: 'Actuar tarde o sin umbrales definidos pone en riesgo toda la producción de la temporada.',
     },
   ],
 };

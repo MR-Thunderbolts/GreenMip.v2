@@ -1,6 +1,7 @@
 <script>
   import { scrollToSection } from '../../lib/scroll.js';
   import Tag from '../ui/Tag.svelte';
+  import Icon from '../ui/Icon.svelte';
   import { problem } from '../../content/problem.content.js';
 </script>
 
@@ -23,9 +24,9 @@
         <!-- Action link -->
         <button
           onclick={() => scrollToSection('servicios')}
-          class="font-krub font-semibold text-lg md:text-xl text-greenmip-forest hover:text-greenmip-forest/80 transition-colors cursor-pointer group flex items-center gap-1"
+          class="font-krub font-semibold text-base text-greenmip-forest hover:text-greenmip-forest/80 transition-colors cursor-pointer group flex items-center gap-1 underline underline-offset-2"
         >
-          {problem.learnMoreLabel} <span class="group-hover:translate-x-1 transition-transform">&gt;</span>
+          {problem.learnMoreLabel} <span class="no-underline group-hover:translate-x-1 transition-transform">&gt;</span>
         </button>
 
       </div>
@@ -48,7 +49,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 mt-4">
       {#each problem.points as point}
         <div class="flex flex-col gap-3 items-start">
-          <img src={point.icon} alt="" class="w-6 h-6" />
+          <Icon name={point.icon} class="w-6 h-6 text-greenmip-olive" />
           <h3 class="font-inter font-bold text-base text-greenmip-forest">
             {point.title}
           </h3>

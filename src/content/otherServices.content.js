@@ -1,18 +1,18 @@
 export const otherServices = {
   title: 'Otros servicios',
-  intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dictum volutpat turpis, ut sodales neque elementum non.',
+  intro: 'Soluciones especializadas para optimizar el manejo fitosanitario y maximizar la rentabilidad.',
   services: [
     {
-      title: 'Lorem ipsum dolor sit amet consectetur',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Vivamus euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, eget aliquam nisl nunc eget nisl.',
+      title: 'Gestión de liberación de Agentes de Control Biológico',
+      body: 'A partir de la información generada por los monitoreos, diseño e implemento estrategias de liberación de Agentes de Control Biológico (ACB) adaptadas a la realidad de cada campo. El servicio incluye asesoría en dosificación, adquisición, liberación y evaluación de resultados, maximizando la eficacia del control biológico.',
     },
     {
-      title: 'Adipiscing elit sed do eiusmod',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Vivamus euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, eget aliquam nisl nunc eget nisl.',
+      title: 'Evaluaciones post Aplicación de Fitosanitarios',
+      body: 'Realizo monitoreos georreferenciados para medir la efectividad de las aplicaciones fitosanitarias sobre las plagas objetivo y su impacto en los Agentes de Control Biológico. La información obtenida permite optimizar futuras estrategias de manejo y mejorar la toma de decisiones.',
     },
     {
-      title: 'Tempor incididunt ut labore',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Vivamus euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, eget aliquam nisl nunc eget nisl.',
+      title: 'Capacitación y Transferencia Técnica',
+      body: 'Fortalezco las capacidades de los equipos de campo mediante capacitaciones teórico-prácticas en monitoreo de plagas, identificación de especies, metodologías de evaluación, gestión de datos y análisis de información. También desarrollo talleres y días de campo enfocados en la toma de decisiones basada en evidencia.',
     },
   ],
 };

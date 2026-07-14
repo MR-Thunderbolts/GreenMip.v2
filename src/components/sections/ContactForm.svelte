@@ -1,6 +1,7 @@
 <script>
   import { CONTACT, whatsappUrl } from '../../lib/constants.js';
   import Tag from '../ui/Tag.svelte';
+  import Icon from '../ui/Icon.svelte';
   import { contact } from '../../content/contact.content.js';
 
   let name = $state('');
@@ -67,7 +68,7 @@
       <!-- Email Link card -->
       <div class="flex gap-4 items-center">
         <div class="border border-greenmip-forest/5 flex items-center justify-center p-2 bg-greenmip-bright/10 rounded-full w-12 h-12 shadow-sm">
-          <img src="/assets/email-icon.svg" alt="" class="w-5.5 h-5.5" />
+          <Icon name="mail" class="w-5 h-5 text-greenmip-forest" />
         </div>
         <div class="flex flex-col gap-1">
           <span class="font-inter font-bold text-xs tracking-[0.06em] text-greenmip-forest uppercase">
@@ -195,7 +196,7 @@
         <!-- Footnote -->
         <div class="text-center">
           <p class="font-krub font-medium text-xs text-greenmip-olive">
-            <span class="font-bold">*</span> {contact.footnote}
+            {contact.footnote}
           </p>
         </div>
 

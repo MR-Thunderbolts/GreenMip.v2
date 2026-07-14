@@ -1,7 +1,7 @@
 export const hero = {
   callLabel: 'Llamar ahora',
-  title: 'Lorem ipsum dolor sit amet consectetur',
-  body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Vivamus euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, eget aliquam nisl nunc eget nisl.',
-  image: { src: '/assets/placeholder-image.svg', alt: 'Imagen de referencia' },
+  title: 'Monitoreo de plagas con datos precisos',
+  body: 'Monitoreo profesional de plagas con GPS, informes en 48 hrs y atención directa con el asesor. Más de 13 años de experiencia en paltos, cítricos, arándanos y más.',
+  image: { src: '/assets/hero-main.png', alt: 'Monitoreo de plagas en terreno' },
   cta: { label: 'Contactar' },
 };

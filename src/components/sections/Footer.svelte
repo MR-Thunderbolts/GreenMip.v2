@@ -44,8 +44,8 @@
         <h4 class="font-inter font-bold text-xs tracking-[0.06em] text-white uppercase mb-1">
           {footer.contactTitle}
         </h4>
-        <a href="tel:{CONTACT.phoneDial}" class="font-krub font-medium text-base text-white/90 hover:text-greenmip-bright hover:underline transition-all">
-          {CONTACT.phoneDisplay}
+        <a href="tel:{footer.contactPhoneDial}" class="font-krub font-medium text-base text-white/90 hover:text-greenmip-bright hover:underline transition-all">
+          {footer.contactPhoneDisplay}
         </a>
         <a href="mailto:{CONTACT.email}" class="font-krub font-medium text-base text-white/90 hover:text-greenmip-bright hover:underline transition-all break-all">
           {CONTACT.email}
@@ -69,17 +69,16 @@
         <img src={footer.certificationImage.src} alt={footer.certificationImage.alt} class="h-20 w-auto rounded-md object-contain" loading="lazy" />
 
         <!-- Sello CO2 -->
-        <div class="relative w-[212px] h-[68px] border border-white/30 rounded-lg flex items-center p-2 bg-greenmip-dark-bg/60 backdrop-blur-sm overflow-hidden select-none">
-          <div class="absolute left-2 w-10 h-10 flex items-center justify-center">
-            <img src="/assets/co2-seal-bg.svg" alt="" class="absolute w-full h-full opacity-20" />
-            <img src="/assets/co2-seal-leaf.svg" alt="" class="w-6 h-6 z-10" />
+        <div class="relative w-fit max-w-full border border-greenmip-light-bg rounded-lg flex items-center gap-2.5 pl-2.5 pr-3 py-2.5 bg-white select-none">
+          <div class="w-10 h-10 shrink-0 flex flex-col items-center justify-center gap-0.5 overflow-hidden">
+            <img src="/assets/co2-seal-icon.svg" alt="" class="w-6 h-6 object-contain" />
+            <img src="/assets/co2-seal-wordmark.svg" alt="" class="w-7 h-2 object-contain" />
           </div>
-          <img src="/assets/footer-line.svg" alt="" class="absolute left-14 top-1.5 bottom-1.5 h-[80%] opacity-30" />
-          <div class="ml-14 flex flex-col justify-center items-start text-left">
-            <p class="font-bold text-xs text-white leading-[14px]">
-              {footer.co2Seal.value} de CO<sub>2</sub> <span class="font-normal text-[10px]">{footer.co2Seal.unitLabel}</span>
+          <div class="flex flex-col items-start text-left">
+            <p class="font-bold text-sm text-[#191E31] leading-5">
+              {footer.co2Seal.value} de CO<sub>2</sub> <span class="font-bold text-[9px]">{footer.co2Seal.unitLabel}</span>
             </p>
-            <p class="text-[10px] font-bold text-white/80 mt-0.5 leading-[10px]">
+            <p class="text-[9px] font-bold text-[#191E31] leading-none mt-0.5">
               {footer.co2Seal.caption}
             </p>
           </div>
@@ -94,7 +93,7 @@
     <!-- Bottom section: Copyright -->
     <div class="text-center font-krub font-semibold text-xs text-white/80 leading-[24px]">
       <p>
-        © {new Date(Date.now()).getFullYear()} Todos los derechos reservados. {footer.developedByLabel}
+        © {new Date(Date.now()).getFullYear()} GreenMIP. Todos los derechos reservados. {footer.developedByLabel}
         <a href={footer.developedByUrl} target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-greenmip-bright transition-colors">
           {footer.developedByName}
         </a>

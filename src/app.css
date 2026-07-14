@@ -28,6 +28,10 @@ body {
   overflow-x: hidden;
 }
 
+section[id] {
+  scroll-margin-top: 88px;
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;

@@ -56,7 +56,7 @@
 
       <!-- WhatsApp Link card -->
       <div class="flex gap-4 items-center mt-4">
-        <div class="border border-[#e5e7eb] flex items-center justify-center p-2 bg-white rounded-full w-12 h-12 shadow-sm">
+        <div class="border border-[#e5e7eb] flex items-center justify-center p-2 bg-white rounded-full w-12 h-12">
           <img src="/assets/whatsapp-icon.svg" alt="" class="w-5 h-5" />
         </div>
         <div class="flex flex-col gap-1">
@@ -71,7 +71,7 @@
 
       <!-- Email Link card -->
       <div class="flex gap-4 items-center">
-        <div class="border border-[#e5e7eb] flex items-center justify-center p-2 bg-white rounded-full w-12 h-12 shadow-sm">
+        <div class="border border-[#e5e7eb] flex items-center justify-center p-2 bg-white rounded-full w-12 h-12">
           <Icon name="mail" class="w-5 h-5 text-ink" />
         </div>
         <div class="flex flex-col gap-1">

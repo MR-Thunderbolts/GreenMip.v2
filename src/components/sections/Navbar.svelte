@@ -23,7 +23,7 @@
     <div class="navbar-start flex-none">
       <!-- Logo -->
       <a href="#hero" onclick={(e) => { e.preventDefault(); setActive('hero'); }} class="flex items-center cursor-pointer transition-transform duration-200 hover:scale-105">
-        <img src={navbar.logo.src} alt={navbar.logo.alt} class="h-5 md:h-9 w-auto max-w-[110px] md:max-w-none object-contain" />
+        <img src={navbar.logo.src} alt={navbar.logo.alt} class="h-7 md:h-9 w-auto max-w-[130px] md:max-w-none object-contain" />
       </a>
     </div>
 

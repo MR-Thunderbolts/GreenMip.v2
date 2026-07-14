@@ -6,7 +6,7 @@
 
 <footer class="bg-greenmip-dark-bg relative overflow-hidden w-full py-12 md:py-16 px-4 md:px-12 lg:px-48 text-white">
   <!-- Background texture overlay -->
-  <div class="absolute inset-0 z-0 pointer-events-none opacity-10">
+  <div class="absolute inset-0 z-0 pointer-events-none opacity-100">
     <img src="/assets/footer-bg-texture.svg" alt="" class="w-full h-full object-cover" />
   </div>
 

@@ -12,7 +12,7 @@
 <section id="servicios" class="bg-greenmip-sage relative overflow-hidden w-full py-16 md:py-24 px-4 md:px-12 lg:px-48 text-white">
 
   <!-- Background textures and shapes -->
-  <div class="absolute inset-0 z-0 pointer-events-none opacity-10">
+  <div class="absolute inset-0 z-0 pointer-events-none opacity-100">
     <img src="/assets/services-bg-group.svg" alt="" class="absolute top-0 left-0 w-1/4 max-w-[200px]" />
     <img src="/assets/services-bg-group1.svg" alt="" class="absolute bottom-10 left-0 w-1/5 max-w-[150px]" />
     <img src="/assets/services-bg-container.svg" alt="" class="absolute inset-0 w-full h-full object-cover" />

@@ -4,11 +4,11 @@
   import { advantages } from '../../content/advantages.content.js';
 </script>
 
-<section id="ventajas" class="bg-greenmip-sage w-full py-16 md:py-24 text-white text-center">
+<section id="ventajas" class="bg-greenmip-sage w-full py-16 md:py-24 text-white">
   <Container class="flex flex-col gap-12">
 
     <!-- Section Header -->
-    <div class="flex flex-col gap-4 items-center max-w-[700px] mx-auto">
+    <div class="flex flex-col gap-4 items-start max-w-[700px]">
       <span class="font-inter font-bold text-xs tracking-[0.06em] text-white uppercase">
         {advantages.eyebrow}
       </span>
@@ -28,7 +28,7 @@
             <h3 class="font-inter font-bold text-xl text-ink tracking-tight">
               {item.title}
             </h3>
-            <p class="font-krub text-sm text-body-strong">
+            <p class="font-krub text-sm text-greenmip-olive">
               {item.body}
             </p>
           </div>

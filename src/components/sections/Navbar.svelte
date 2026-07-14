@@ -81,7 +81,7 @@
     aria-label="Cerrar menú"
     onclick={() => (mobileMenuOpen = false)}
   ></button>
-  <div class="fixed top-20 inset-x-3 z-50 bg-white rounded-2xl shadow-xl p-6 lg:hidden">
+  <div class="fixed top-28 inset-x-3 z-50 bg-white rounded-2xl shadow-xl p-6 lg:hidden">
     <ul class="flex flex-col items-center gap-2">
       {#each navbar.links as link}
         <li class="w-full">

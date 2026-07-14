@@ -7,7 +7,7 @@
 
 <section id="hero" class="relative overflow-hidden w-full bg-greenmip-dark-bg text-white">
 
-  <div class="lg:container lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center lg:px-12 lg:py-24 relative">
+  <div class="lg:container lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center lg:px-12 pt-24 md:pt-32 lg:pb-24 relative">
 
     <!-- Hero Image: full-bleed on mobile, contained + rounded on desktop -->
     <div class="lg:flex lg:justify-center lg:items-center lg:order-1">

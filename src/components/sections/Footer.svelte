@@ -2,15 +2,17 @@
   import { scrollToSection } from '../../lib/scroll.js';
   import { CONTACT } from '../../lib/constants.js';
   import { footer } from '../../content/footer.content.js';
+  import Container from '../ui/Container.svelte';
 </script>
 
 <footer class="bg-greenmip-dark-bg relative overflow-hidden w-full py-12 md:py-16 px-4 md:px-12 lg:px-48 text-white">
   <!-- Background texture overlay -->
-  <div class="absolute inset-0 z-0 pointer-events-none opacity-100">
-    <img src="/assets/footer-bg-texture.svg" alt="" class="w-full h-full object-cover" />
-  </div>
+  <div
+    class="absolute inset-0 z-0 pointer-events-none opacity-15"
+    style="background-image: url('/assets/textura-hero-banner.svg'); background-size: cover; background-position: center;"
+  ></div>
 
-  <div class="container mx-auto flex flex-col gap-12 relative z-10">
+  <Container class="flex flex-col gap-12 relative z-10">
 
     <!-- Top section with columns -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6 items-start">
@@ -18,21 +20,21 @@
       <!-- Column 1: Logo & Summary -->
       <div class="lg:col-span-3 flex flex-col gap-4 items-start max-w-[264px]">
         <img src={footer.logo.src} alt={footer.logo.alt} class="h-[30px]" />
-        <p class="font-krub font-medium text-xs leading-[24px] text-white/90">
+        <p class="font-krub font-normal text-sm leading-[24px] text-white/90">
           {footer.summary}
         </p>
       </div>
 
       <!-- Column 2: Navigation -->
       <div class="lg:col-span-3 flex flex-col gap-3 items-start">
-        <h4 class="font-inter font-bold text-xs tracking-[0.06em] text-white uppercase mb-1">
+        <h4 class="font-inter font-bold text-[11px] tracking-[0.06em] text-white uppercase mb-1">
           {footer.navTitle}
         </h4>
         {#each footer.navLinks as link}
           <a
             href="#{link.id}"
             onclick={(e) => { e.preventDefault(); scrollToSection(link.id); }}
-            class="font-krub font-medium text-base text-white/90 hover:text-greenmip-bright transition-colors text-left cursor-pointer"
+            class="font-krub font-normal text-[15px] text-white/90 hover:text-greenmip-bright transition-colors text-left cursor-pointer"
           >
             {link.label}
           </a>
@@ -41,17 +43,17 @@
 
       <!-- Column 3: Contact & Socials -->
       <div class="lg:col-span-3 flex flex-col gap-3 items-start">
-        <h4 class="font-inter font-bold text-xs tracking-[0.06em] text-white uppercase mb-1">
+        <h4 class="font-inter font-bold text-[11px] tracking-[0.06em] text-white uppercase mb-1">
           {footer.contactTitle}
         </h4>
-        <a href="tel:{footer.contactPhoneDial}" class="font-krub font-medium text-base text-white/90 hover:text-greenmip-bright hover:underline transition-all">
+        <a href="tel:{footer.contactPhoneDial}" class="font-krub font-normal text-[15px] text-white/90 underline decoration-1 underline-offset-4 hover:text-greenmip-bright transition-all">
           {footer.contactPhoneDisplay}
         </a>
-        <a href="mailto:{CONTACT.email}" class="font-krub font-medium text-base text-white/90 hover:text-greenmip-bright hover:underline transition-all break-all">
+        <a href="mailto:{CONTACT.email}" class="font-krub font-normal text-[15px] text-white/90 underline decoration-1 underline-offset-4 hover:text-greenmip-bright transition-all break-all">
           {CONTACT.email}
         </a>
         {#each footer.socials as social}
-          <a href={social.url} target="_blank" rel="noopener noreferrer" class="font-krub font-medium text-base text-white/90 hover:text-greenmip-bright hover:underline transition-all">
+          <a href={social.url} target="_blank" rel="noopener noreferrer" class="font-krub font-normal text-[15px] text-white/90 underline decoration-1 underline-offset-4 hover:text-greenmip-bright transition-all">
             {social.label}
           </a>
         {/each}
@@ -59,14 +61,16 @@
 
       <!-- Column 4: Certifications & Sello CO2 -->
       <div class="lg:col-span-3 flex flex-col gap-4 items-start">
-        <h4 class="font-inter font-bold text-xs tracking-[0.06em] text-white uppercase">
+        <h4 class="font-inter font-bold text-[11px] tracking-[0.06em] text-white uppercase">
           {footer.certificationTitle}
         </h4>
-        <p class="font-krub font-semibold text-base text-greenmip-bright leading-[28px]">
+        <p class="font-krub font-medium text-[15px] text-[#cde673] leading-[28px]">
           {footer.certificationText}
         </p>
 
-        <img src={footer.certificationImage.src} alt={footer.certificationImage.alt} class="h-20 w-auto rounded-md object-contain" loading="lazy" />
+        <a href="https://ciclo17.cl" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[200px] aspect-[213/68]">
+          <img src="/assets/certification-seal.svg" alt={footer.certificationImage.alt} class="w-full h-full object-contain" loading="lazy" />
+        </a>
 
         <!-- Sello CO2 -->
         <div class="relative w-fit max-w-full border border-greenmip-light-bg rounded-lg flex items-center gap-2.5 pl-2.5 pr-3 py-2.5 bg-white select-none">
@@ -100,5 +104,5 @@
       </p>
     </div>
 
-  </div>
+  </Container>
 </footer>

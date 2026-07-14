@@ -7,7 +7,7 @@
 </script>
 
 <section id="sobre-isaac" class="bg-white w-full py-16 md:py-24">
-  <Container class="flex flex-col gap-20">
+  <Container class="flex flex-col gap-14">
 
     <!-- Row 1: About Advisor -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -43,7 +43,7 @@
 
         <!-- Categories -->
         <div class="flex flex-col gap-2 mt-2 w-full">
-          <span class="font-inter font-bold text-[10px] uppercase tracking-[0.05em] text-muted">
+          <span class="font-inter font-bold text-[11px] uppercase tracking-[0.06em] text-greenmip-olive">
             {about.categoriesLabel}
           </span>
           <div class="flex flex-wrap gap-2">

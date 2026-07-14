@@ -9,7 +9,7 @@
   };
 
   const chipVariants = {
-    olive: 'border border-greenmip-sage text-greenmip-gray font-medium',
+    olive: 'border border-greenmip-sage text-greenmip-sage font-medium',
     'olive-solid': 'border border-greenmip-sage bg-white text-greenmip-sage font-medium',
     'sage-outline': 'border border-gray-300 text-greenmip-sage font-semibold',
   };

@@ -49,11 +49,11 @@
   --color-greenmip-card-bg: #ffffff;
   --font-krub: "Krub", "Inter", sans-serif;
   --font-inter: "Inter", sans-serif;
-  /* Grises neutros (paridad V3) — cuerpo de texto sin tinte verde */
-  --color-ink: #1a1f16;
-  --color-body: #6b7280;
-  --color-body-strong: #4b5563;
-  --color-muted: #9ca3af;
+  /* Tokens de texto — alineados al sistema real de Figma (no al neutro que se había inventado en el port V3) */
+  --color-ink: #223f30; /* = greenmip-forest: titulos/headings */
+  --color-body: #6a7466; /* = greenmip-gray: body/descripciones */
+  --color-body-strong: #223f30; /* = greenmip-forest: body dentro de cards/citas */
+  --color-muted: #656d51; /* = greenmip-olive: eyebrows/labels/meta */
 }
 
 html {

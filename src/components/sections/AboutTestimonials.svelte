@@ -7,7 +7,7 @@
 </script>
 
 <section id="sobre-isaac" class="bg-white w-full py-16 md:py-24">
-  <Container class="flex flex-col gap-14">
+  <Container class="flex flex-col gap-8">
 
     <!-- Row 1: About Advisor -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

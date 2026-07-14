@@ -19,8 +19,8 @@
 </script>
 
 <div class="fixed top-3 inset-x-0 z-50 px-3 md:px-8">
-  <div class="navbar bg-white shadow-lg rounded-2xl px-2 md:px-8 py-2 max-w-6xl mx-auto transition-all duration-300 flex-nowrap gap-1">
-    <div class="navbar-start flex-none">
+  <div class="navbar bg-white shadow-lg rounded-lg px-2 md:px-8 py-2 max-w-[1200px] mx-auto transition-all duration-300 flex-nowrap gap-1">
+    <div class="navbar-start flex-none w-auto">
       <!-- Logo -->
       <a href="#hero" onclick={(e) => { e.preventDefault(); setActive('hero'); }} class="flex items-center cursor-pointer transition-transform duration-200 hover:scale-105">
         <img src={navbar.logo.src} alt={navbar.logo.alt} class="h-7 md:h-9 w-auto max-w-[130px] md:max-w-none object-contain" />
@@ -28,20 +28,20 @@
     </div>
 
     <!-- Desktop Navigation links -->
-    <div class="navbar-center hidden lg:flex">
+    <div class="navbar-center hidden lg:flex flex-1 justify-center">
       <ul class="flex items-center gap-8 px-1">
         {#each navbar.links as link}
           <li>
             <a
               href="#{link.id}"
               onclick={(e) => { e.preventDefault(); setActive(link.id); }}
-              class="flex items-center gap-2 text-greenmip-forest hover:text-greenmip-forest/80 font-medium text-sm transition-all duration-200 cursor-pointer relative py-2"
+              class="flex items-center gap-2 text-ink hover:text-ink/80 font-krub font-medium text-sm transition-all duration-200 cursor-pointer relative py-2"
             >
               {#if activeSection === link.id}
                 <img src="/assets/dot-active.svg" alt="" class="w-1.5 h-1.5 animate-pulse" />
-                <span class="font-semibold text-greenmip-forest">{link.label}</span>
+                <span class="font-krub font-bold text-ink">{link.label}</span>
               {:else}
-                <span class="text-greenmip-forest/70 hover:text-greenmip-forest">{link.label}</span>
+                <span class="font-krub font-medium text-ink/70 hover:text-ink">{link.label}</span>
               {/if}
             </a>
           </li>
@@ -49,7 +49,7 @@
       </ul>
     </div>
 
-    <div class="navbar-end flex-none gap-1 md:gap-2">
+    <div class="navbar-end flex-none w-auto gap-1 md:gap-2">
       <!-- CTA Button (always visible, mobile + desktop) -->
       <a
         href="#contacto"

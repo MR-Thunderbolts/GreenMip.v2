@@ -49,6 +49,11 @@
   --color-greenmip-card-bg: #ffffff;
   --font-krub: "Krub", "Inter", sans-serif;
   --font-inter: "Inter", sans-serif;
+  /* Grises neutros (paridad V3) — cuerpo de texto sin tinte verde */
+  --color-ink: #1a1f16;
+  --color-body: #6b7280;
+  --color-body-strong: #4b5563;
+  --color-muted: #9ca3af;
 }
 
 html {
@@ -65,7 +70,7 @@ body {
 }
 
 section[id] {
-  scroll-margin-top: 88px;
+  scroll-margin-top: 110px; /* B3: aire bajo navbar sticky, como V3 scroll-padding-top */
 }
 
 /* Scrollbar styling */

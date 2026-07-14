@@ -1,19 +1,21 @@
 <script>
   import Tag from '../ui/Tag.svelte';
-  import Card from '../ui/Card.svelte';
+  import Container from '../ui/Container.svelte';
   import { howItWorks } from '../../content/howItWorks.content.js';
 </script>
 
-<section id="como-funciona" class="bg-white w-full py-16 md:py-24 px-4 md:px-12 lg:px-48">
-  <div class="container mx-auto flex flex-col gap-12">
+<section id="como-funciona" class="bg-white w-full py-16 md:py-24">
+  <Container class="flex flex-col gap-12">
 
     <!-- Section Header -->
     <div class="flex flex-col gap-4 items-start max-w-[500px]">
-      <Tag label={howItWorks.eyebrow} variant="forest" />
-      <h2 class="font-inter font-bold text-[26px] md:text-[32px] leading-[32px] md:leading-[40px] text-greenmip-forest tracking-[-0.03em]">
+      <span class="font-inter font-bold text-[10px] uppercase tracking-[0.05em] text-[#365C48]">
+        {howItWorks.eyebrow}
+      </span>
+      <h2 class="font-inter font-bold text-[32px] md:text-[40px] leading-[1.1] text-ink tracking-[-1px]">
         {howItWorks.title}
       </h2>
-      <p class="font-krub text-greenmip-olive text-lg md:text-xl leading-[28px]">
+      <p class="font-krub text-body text-lg md:text-xl leading-[28px]">
         {howItWorks.subtitle}
       </p>
     </div>
@@ -21,18 +23,20 @@
     <!-- Steps Grid -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mt-4">
       {#each howItWorks.steps as step}
-        <Card variant="bordered-soft" class="flex flex-col justify-between p-6">
+        <div class="flex flex-col justify-between">
 
           <!-- Text Content -->
           <div class="flex flex-col gap-3 items-start mb-6">
-            <!-- Step Number -->
-            <span class="font-inter font-bold text-greenmip-olive text-xs tracking-[0.06em]">
-              {step.num}
-            </span>
-            <h3 class="font-inter font-bold text-xl text-greenmip-forest leading-[24px]">
-              {step.title}
-            </h3>
-            <p class="font-krub text-greenmip-olive text-base leading-[24px]">
+            <!-- Step Number + Title -->
+            <div class="flex flex-row items-start gap-3">
+              <span class="font-inter font-medium text-base text-muted">
+                {step.num}
+              </span>
+              <h3 class="font-inter font-bold text-xl text-ink leading-[24px]">
+                {step.title}
+              </h3>
+            </div>
+            <p class="font-krub text-body text-base leading-[24px]">
               {step.body}
             </p>
 
@@ -45,7 +49,7 @@
           </div>
 
           <!-- Image -->
-          <div class="w-full h-[185px] rounded-2xl overflow-hidden border border-black/5 mt-auto">
+          <div class="w-full h-[185px] rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] mt-auto">
             <img
               src={step.image.src}
               alt={step.image.alt}
@@ -54,9 +58,9 @@
             />
           </div>
 
-        </Card>
+        </div>
       {/each}
     </div>
 
-  </div>
+  </Container>
 </section>

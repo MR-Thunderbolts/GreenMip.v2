@@ -2,22 +2,23 @@
   import { scrollToSection } from '../../lib/scroll.js';
   import Tag from '../ui/Tag.svelte';
   import Icon from '../ui/Icon.svelte';
+  import Container from '../ui/Container.svelte';
   import { problem } from '../../content/problem.content.js';
 </script>
 
-<section id="problema" class="bg-white w-full py-16 md:py-24 px-4 md:px-12 lg:px-48">
-  <div class="container mx-auto flex flex-col gap-12 md:gap-16">
+<section id="problema" class="bg-white w-full py-16 md:py-24">
+  <Container class="flex flex-col gap-12 md:gap-16">
 
     <!-- Top Introduction Row -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-24 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
       <!-- Text (Left side on desktop) -->
-      <div class="lg:col-span-7 flex flex-col gap-6 items-start">
+      <div class="flex flex-col gap-6 items-start">
 
         <Tag label={problem.tag} />
 
         <!-- Title -->
-        <h2 class="font-inter font-bold text-[26px] md:text-[32px] leading-[32px] md:leading-[40px] text-greenmip-forest tracking-[-0.03em] max-w-[560px]">
+        <h2 class="font-inter font-bold text-[32px] md:text-[40px] leading-[1.1] text-ink tracking-[-1px] max-w-[560px]">
           {problem.title}
         </h2>
 
@@ -32,8 +33,8 @@
       </div>
 
       <!-- Image (Right side on desktop) -->
-      <div class="lg:col-span-5 flex justify-center">
-        <div class="relative w-full max-w-[460px] aspect-[458/286] rounded-2xl overflow-hidden shadow-lg border border-black/5">
+      <div class="flex justify-center">
+        <div class="relative w-full aspect-[458/286] rounded-[28px] overflow-hidden shadow-lg">
           <img
             src={problem.image.src}
             alt={problem.image.alt}
@@ -49,16 +50,16 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 mt-4">
       {#each problem.points as point}
         <div class="flex flex-col gap-3 items-start">
-          <Icon name={point.icon} class="w-6 h-6 text-greenmip-olive" />
-          <h3 class="font-inter font-bold text-base text-greenmip-forest">
+          <Icon name={point.icon} class="w-8 h-8 text-greenmip-sage" />
+          <h3 class="font-inter font-bold text-xl text-ink">
             {point.title}
           </h3>
-          <p class="font-krub text-greenmip-olive text-base leading-[24px]">
+          <p class="font-krub text-body text-base leading-[24px]">
             {point.body}
           </p>
         </div>
       {/each}
     </div>
 
-  </div>
+  </Container>
 </section>

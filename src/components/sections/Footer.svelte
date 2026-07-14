@@ -68,11 +68,7 @@
           {footer.certificationText}
         </p>
 
-        <a href="https://ciclo17.cl" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[200px] aspect-[250/80]">
-          <img src={footer.certificationImage.src} alt={footer.certificationImage.alt} class="w-full h-full object-contain" loading="lazy" />
-        </a>
-
-        <!-- Sello CO2 -->
+        <!-- Sello CO2 / energy badge -->
         <div class="relative w-fit max-w-full border border-greenmip-light-bg rounded-lg flex items-center gap-2.5 pl-2.5 pr-3 py-2.5 bg-white select-none">
           <div class="w-10 h-10 shrink-0 flex flex-col items-center justify-center gap-0.5 overflow-hidden">
             <img src="/assets/co2-seal-icon.svg" alt="" class="w-6 h-6 object-contain" />
@@ -87,6 +83,10 @@
             </p>
           </div>
         </div>
+
+        <a href="https://ciclo17.cl" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[200px] aspect-[250/80]">
+          <img src={footer.certificationImage.src} alt={footer.certificationImage.alt} class="w-full h-full object-contain" loading="lazy" />
+        </a>
       </div>
 
     </div>

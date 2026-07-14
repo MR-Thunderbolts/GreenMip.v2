@@ -2,7 +2,7 @@ export const problem = {
   tag: 'EL PROBLEMA',
   title: 'Sin datos precisos no puedes controlar tus plagas',
   learnMoreLabel: 'Saber más',
-  image: { src: '/assets/problem-main.png', alt: 'Muestra de plaga no controlada' },
+  image: { src: '/assets/problem-main.webp', alt: 'Muestra de plaga no controlada' },
   points: [
     {
       icon: 'schedule',

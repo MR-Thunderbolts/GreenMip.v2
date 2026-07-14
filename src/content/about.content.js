@@ -5,7 +5,7 @@ export const about = {
     tag: 'El especialista',
     title: 'Soy Isaac Vera, tu aliado en el campo',
     body: 'Técnico agrícola con más de 13 años de experiencia en Manejo Integrado de Plagas. Mi objetivo es simple: que cuentes con información clara para tomar decisiones acertadas en el momento oportuno. Sin teoría. Datos de tu campo en tus manos.',
-    photo: { src: '/assets/isaac-vera.png', alt: 'Isaac Vera' },
+    photo: { src: '/assets/isaac-vera.webp', alt: 'Isaac Vera' },
     linkedinUrl: '#',
   },
   categoriesLabel: 'CULTIVOS ATENDIDOS',

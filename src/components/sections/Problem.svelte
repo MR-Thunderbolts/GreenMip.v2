@@ -50,7 +50,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 mt-4">
       {#each problem.points as point}
         <div class="flex flex-col gap-3 items-start">
-          <Icon name={point.icon} class="w-6 h-6 lg:w-8 lg:h-8 text-greenmip-sage" />
+          <Icon name={point.icon} class="w-8 h-8 text-greenmip-sage" />
           <h3 class="font-inter font-bold text-xl text-ink">
             {point.title}
           </h3>

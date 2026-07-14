@@ -2,16 +2,18 @@
   import Carousel from '../ui/Carousel.svelte';
   import Card from '../ui/Card.svelte';
   import Tag from '../ui/Tag.svelte';
+  import Container from '../ui/Container.svelte';
   import { otherServices } from '../../content/otherServices.content.js';
 </script>
 
 <section class="bg-greenmip-sage relative overflow-hidden w-full py-16 md:py-24 px-4 md:px-12 lg:px-48 text-white">
-  <!-- Background texture overlay -->
-  <div class="absolute inset-0 z-0 pointer-events-none opacity-100">
-    <img src="/assets/other-services-bg.svg" alt="" class="w-full h-full object-cover" />
-  </div>
+  <!-- Background texture overlay (paridad V3 §4) -->
+  <div
+    class="absolute inset-0 z-0 pointer-events-none opacity-40"
+    style="background-image: url('/assets/textura-hero-banner.svg'); background-size: cover; background-position: center;"
+  ></div>
 
-  <div class="container mx-auto flex flex-col gap-5 relative z-10">
+  <Container class="flex flex-col gap-5 relative z-1">
 
     <!-- Section Header -->
     <div class="flex flex-col gap-3 items-start max-w-[500px]">
@@ -43,18 +45,18 @@
     </div>
 
     <!-- Cards Grid (desktop) -->
-    <div class="hidden md:grid grid-cols-3 gap-6 items-stretch">
+    <div class="hidden md:grid grid-cols-3 gap-6">
       {#each otherServices.services as svc}
-        <Card variant="elevated" class="text-greenmip-forest p-7 flex flex-col gap-4 hover:shadow-xl transition-all duration-300 min-h-[368px] hover:-translate-y-1">
-          <h3 class="font-inter font-semibold text-xl md:text-2xl text-greenmip-forest tracking-tight leading-[30px]">
+        <Card variant="elevated" class="text-greenmip-forest py-8 px-6 flex flex-col gap-4 shadow-[0_10px_30px_rgba(0,0,0,0.1)] hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <h3 class="font-inter font-bold text-xl text-ink tracking-tight">
             {svc.title}
           </h3>
-          <p class="font-krub text-sm leading-[24px] text-greenmip-gray mt-2">
+          <p class="font-krub text-sm font-medium leading-[24px] text-body-strong">
             {svc.body}
           </p>
         </Card>
       {/each}
     </div>
 
-  </div>
+  </Container>
 </section>

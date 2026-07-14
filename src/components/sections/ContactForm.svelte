@@ -2,6 +2,7 @@
   import { CONTACT, whatsappUrl } from '../../lib/constants.js';
   import Tag from '../ui/Tag.svelte';
   import Icon from '../ui/Icon.svelte';
+  import Container from '../ui/Container.svelte';
   import { contact } from '../../content/contact.content.js';
 
   let name = $state('');
@@ -34,11 +35,12 @@
   }
 </script>
 
-<section id="contacto" class="bg-white w-full py-16 md:py-24 px-4 md:px-12 lg:px-48">
-  <div class="container mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-start">
+<section id="contacto" class="bg-white w-full py-16 md:py-24">
+  <Container>
+  <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-16 items-start">
 
     <!-- Left Column: Contact Info -->
-    <div class="lg:col-span-5 flex flex-col gap-6 items-start max-w-[345px]">
+    <div class="flex flex-col gap-6 items-start max-w-[345px]">
 
       <Tag label={contact.tag} variant="forest" />
 
@@ -54,7 +56,7 @@
 
       <!-- WhatsApp Link card -->
       <div class="flex gap-4 items-center mt-4">
-        <div class="border border-greenmip-bright/20 flex items-center justify-center p-2 bg-greenmip-bright/10 rounded-full w-12 h-12 shadow-sm">
+        <div class="border border-[#e5e7eb] flex items-center justify-center p-2 bg-white rounded-full w-12 h-12 shadow-sm">
           <img src="/assets/whatsapp-icon.svg" alt="" class="w-5 h-5" />
         </div>
         <div class="flex flex-col gap-1">
@@ -69,8 +71,8 @@
 
       <!-- Email Link card -->
       <div class="flex gap-4 items-center">
-        <div class="border border-greenmip-forest/5 flex items-center justify-center p-2 bg-greenmip-bright/10 rounded-full w-12 h-12 shadow-sm">
-          <Icon name="mail" class="w-5 h-5 text-greenmip-forest" />
+        <div class="border border-[#e5e7eb] flex items-center justify-center p-2 bg-white rounded-full w-12 h-12 shadow-sm">
+          <Icon name="mail" class="w-5 h-5 text-ink" />
         </div>
         <div class="flex flex-col gap-1">
           <span class="font-inter font-bold text-xs tracking-[0.06em] text-greenmip-forest uppercase">
@@ -85,7 +87,7 @@
     </div>
 
     <!-- Right Column: Contact Form Card -->
-    <div class="lg:col-span-7 bg-greenmip-light-bg border border-greenmip-border p-6 md:p-8 rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] w-full">
+    <div class="bg-greenmip-light-bg border border-greenmip-border p-6 md:p-8 rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] w-full">
       <h3 class="font-inter font-bold text-xl md:text-2xl text-greenmip-forest tracking-tight mb-6">
         {contact.formTitle}
       </h3>
@@ -212,4 +214,5 @@
     </div>
 
   </div>
+  </Container>
 </section>

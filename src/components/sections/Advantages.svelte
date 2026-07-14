@@ -4,7 +4,7 @@
   import { advantages } from '../../content/advantages.content.js';
 </script>
 
-<section id="ventajas" class="bg-greenmip-sage w-full py-16 md:py-24 px-4 md:px-12 lg:px-48 text-white text-center">
+<section id="ventajas" class="bg-greenmip-sage w-full py-16 md:py-24 text-white text-center">
   <Container class="flex flex-col gap-12">
 
     <!-- Section Header -->

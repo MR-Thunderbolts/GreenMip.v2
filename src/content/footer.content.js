@@ -18,7 +18,7 @@ export const footer = {
   ],
   certificationTitle: 'Certificaciones',
   certificationText: 'Este sitio funciona 100% con energía renovable certificada.',
-  certificationImage: { src: '/assets/energy-footnote.png', alt: 'Huella de carbono neutral' },
+  certificationImage: { src: '/assets/Certification Seal.svg', alt: 'Sello de certificación Ciclo17' },
   co2Seal: {
     value: '0.3g',
     unitLabel: 'por visita',

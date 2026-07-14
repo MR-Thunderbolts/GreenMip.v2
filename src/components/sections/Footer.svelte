@@ -68,7 +68,7 @@
           {footer.certificationText}
         </p>
 
-        <a href="https://ciclo17.cl" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[200px] aspect-[400/190]">
+        <a href="https://ciclo17.cl" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[200px] aspect-[250/80]">
           <img src={footer.certificationImage.src} alt={footer.certificationImage.alt} class="w-full h-full object-contain" loading="lazy" />
         </a>
 

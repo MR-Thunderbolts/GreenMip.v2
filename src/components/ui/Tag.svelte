@@ -9,8 +9,9 @@
   };
 
   const chipVariants = {
-    olive: 'border border-greenmip-sage text-greenmip-gray',
-    'olive-solid': 'border border-greenmip-sage bg-white text-greenmip-sage',
+    olive: 'border border-greenmip-sage text-greenmip-sage font-medium',
+    'olive-solid': 'border border-greenmip-sage bg-white text-greenmip-sage font-medium',
+    'sage-outline': 'border border-gray-300 text-greenmip-sage font-semibold',
   };
 </script>
 
@@ -22,7 +23,7 @@
   </div>
 {:else}
   <div class="inline-flex px-[12.324px] py-[4.785px] rounded-full {chipVariants[variant]}">
-    <span class="font-krub font-medium text-xs">
+    <span class="font-krub text-xs">
       {label}
     </span>
   </div>

@@ -29,7 +29,20 @@
       "Bash(node hero-check.mjs)",
       "Bash(node final-qa.mjs)",
       "Bash(ls -la \"/temp/readonly/\" 2>&1 | head -20)",
-      "Read(//temp/**)"
+      "Read(//temp/**)",
+      "Bash(python3 -c ' *)",
+      "Bash(curl -sL -o /private/tmp/claude-501/-Users-amarolatoja-Proyectos-Ciclo17-GreenMip-v2/722de13b-3eb6-454d-a9e2-62ec882a74fd/scratchpad/texture-variants.png \"https://www.figma.com/api/mcp/asset/23c133a0-fcf1-4f06-afc7-b626277e6e2d\")",
+      "Bash(sed -i '' 's/opacity-10/opacity-30/' src/components/sections/ServicesGPS.svelte src/components/sections/OtherServices.svelte src/components/sections/Footer.svelte)",
+      "Bash(sed -i '' 's/opacity-20 bg-cover bg-center/opacity-30 bg-cover bg-center/' src/components/sections/Hero.svelte)",
+      "Bash(sed -i '' 's/opacity-30/opacity-100/' src/components/sections/ServicesGPS.svelte src/components/sections/OtherServices.svelte src/components/sections/Footer.svelte)",
+      "Bash(sed -i '' 's/opacity-30 bg-cover bg-center/opacity-100 bg-cover bg-center/' src/components/sections/Hero.svelte)",
+      "Bash(node texture-check.mjs)",
+      "mcp__claude_ai_Figma__get_screenshot",
+      "Bash(curl -sL -o *)",
+      "mcp__claude_ai_Figma__get_design_context",
+      "mcp__676f8f7a-b6e1-4ee1-8991-4a649d1aded0__get_screenshot",
+      "mcp__claude_ai_Figma__get_metadata",
+      "Bash(curl -s http://localhost:*)"
     ]
   }
 }

@@ -30,7 +30,11 @@
   --radius-selector: 999px;
   --radius-field: 0.5rem;
   --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
   --border: 1px;
+  --depth: 0;
+  --noise: 0;
 }
 
 @theme {
@@ -45,6 +49,11 @@
   --color-greenmip-card-bg: #ffffff;
   --font-krub: "Krub", "Inter", sans-serif;
   --font-inter: "Inter", sans-serif;
+  /* Tokens de texto — alineados al sistema real de Figma (no al neutro que se había inventado en el port V3) */
+  --color-ink: #223f30; /* = greenmip-forest: titulos/headings */
+  --color-body: #6a7466; /* = greenmip-gray: body/descripciones */
+  --color-body-strong: #223f30; /* = greenmip-forest: body dentro de cards/citas */
+  --color-muted: #656d51; /* = greenmip-olive: eyebrows/labels/meta */
 }
 
 html {
@@ -61,7 +70,7 @@ body {
 }
 
 section[id] {
-  scroll-margin-top: 88px;
+  scroll-margin-top: 110px; /* B3: aire bajo navbar sticky, como V3 scroll-padding-top */
 }
 
 /* Scrollbar styling */

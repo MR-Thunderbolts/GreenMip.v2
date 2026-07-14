@@ -24,7 +24,7 @@
 
         <!-- Image (Left side on desktop) -->
         <div class="flex justify-center items-center">
-          <div class="relative w-full max-w-[451px] aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+          <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10">
             <img
               src={services.image.src}
               alt={services.image.alt}

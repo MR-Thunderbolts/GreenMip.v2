@@ -12,7 +12,7 @@
   <div class="lg:container lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center lg:px-12 lg:pt-24 lg:pb-24 relative z-10">
 
     <!-- Hero Image: true full-bleed on mobile (absolute, behind floating navbar), contained + rounded on desktop -->
-    <div class="absolute top-0 left-0 w-full h-[220px] lg:static lg:h-auto lg:flex lg:justify-center lg:items-center lg:order-1">
+    <div class="absolute top-0 left-0 w-full h-[340px] lg:static lg:h-auto lg:flex lg:justify-center lg:items-center lg:order-1">
       <div class="relative w-full h-full lg:aspect-[503/461] lg:max-w-[503px] overflow-hidden lg:rounded-2xl lg:shadow-2xl lg:border lg:border-white/10">
         <img
           src={hero.image.src}
@@ -24,7 +24,7 @@
     </div>
 
     <!-- Hero Text Content -->
-    <div class="relative flex flex-col gap-6 items-start justify-center px-4 pt-[252px] pb-12 lg:p-0 lg:order-2 lg:max-w-[513px]">
+    <div class="relative flex flex-col gap-6 items-start justify-center px-4 pt-[372px] pb-12 lg:p-0 lg:order-2 lg:max-w-[513px]">
 
       <!-- Contact Info -->
       <div class="relative z-10 font-krub text-greenmip-light-bg text-base md:text-lg">

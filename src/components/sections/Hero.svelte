@@ -7,7 +7,9 @@
 
 <section id="hero" class="relative overflow-hidden w-full bg-greenmip-dark-bg text-white">
 
-  <div class="lg:container lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center lg:px-12 pt-24 md:pt-32 lg:pb-24 relative">
+  <div class="absolute inset-0 z-0 pointer-events-none opacity-40 bg-cover bg-center" style="background-image: url('/assets/hero-bg-texture.svg');"></div>
+
+  <div class="lg:container lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center lg:px-12 pt-24 md:pt-32 lg:pb-24 relative z-10">
 
     <!-- Hero Image: full-bleed on mobile, contained + rounded on desktop -->
     <div class="lg:flex lg:justify-center lg:items-center lg:order-1">
@@ -24,12 +26,9 @@
     <!-- Hero Text Content -->
     <div class="relative flex flex-col gap-6 items-start justify-center px-4 py-12 lg:p-0 lg:order-2 lg:max-w-[513px]">
 
-      <!-- Background texture overlay (text area only) -->
-      <div class="absolute inset-0 z-0 pointer-events-none opacity-100 bg-cover bg-center" style="background-image: url('/assets/hero-bg-texture.svg'); transform: rotate(180deg);"></div>
-
       <!-- Contact Info -->
-      <div class="relative z-10 font-krub text-greenmip-light-bg text-base md:text-lg">
-        <a href="tel:{CONTACT.phoneDial}" class="hover:text-greenmip-light-bg/70 transition-colors duration-200 underline decoration-solid underline-offset-4">
+      <div class="relative z-10 font-krub text-greenmip-light-bg/60 text-base md:text-lg">
+        <a href="tel:{CONTACT.phoneDial}" class="hover:text-greenmip-light-bg/80 transition-colors duration-200 underline decoration-solid underline-offset-4">
           {hero.callLabel} <span class="font-medium">{CONTACT.phoneDisplay}</span>
         </a>
       </div>

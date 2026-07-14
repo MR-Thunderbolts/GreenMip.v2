@@ -5,7 +5,7 @@
 </script>
 
 <section id="ventajas" class="bg-greenmip-sage w-full py-16 md:py-24 text-white">
-  <Container class="flex flex-col gap-12">
+  <Container class="flex flex-col gap-4">
 
     <!-- Section Header -->
     <div class="flex flex-col gap-4 items-start max-w-[700px]">
@@ -21,7 +21,7 @@
     </div>
 
     <!-- Cards Grid -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-4">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
       {#each advantages.items as item}
         <Card variant="elevated" class="text-greenmip-forest px-6 py-8 flex flex-col items-start justify-center text-left shadow-[0_10px_30px_rgba(0,0,0,0.1)] hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
           <div class="flex flex-col gap-3">

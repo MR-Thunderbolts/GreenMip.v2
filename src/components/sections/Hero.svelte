@@ -29,7 +29,7 @@
 
       <!-- Contact Info -->
       <div class="relative z-10 font-krub text-greenmip-light-bg text-base md:text-lg">
-        <a href="tel:{CONTACT.phoneDial}" class="hover:text-greenmip-bright transition-colors underline decoration-solid underline-offset-4">
+        <a href="tel:{CONTACT.phoneDial}" class="hover:text-greenmip-light-bg/70 transition-colors duration-200 underline decoration-solid underline-offset-4">
           {hero.callLabel} <span class="font-medium">{CONTACT.phoneDisplay}</span>
         </a>
       </div>

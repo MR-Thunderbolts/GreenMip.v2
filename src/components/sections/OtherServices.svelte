@@ -1,5 +1,7 @@
 <script>
   import Carousel from '../ui/Carousel.svelte';
+  import Card from '../ui/Card.svelte';
+  import Tag from '../ui/Tag.svelte';
   import { otherServices } from '../../content/otherServices.content.js';
 </script>
 
@@ -26,19 +28,15 @@
       <Carousel itemCount={otherServices.services.length} dotVariant="on-color">
         {#snippet children()}
           {#each otherServices.services as svc, i}
-            <div class="bg-white text-greenmip-forest rounded-2xl pt-10 pb-6 px-6 flex flex-col gap-4 shrink-0 w-[85%] snap-start">
-              <div class="inline-flex self-start px-3 py-1 rounded-full border-[0.75px] border-greenmip-sage">
-                <span class="font-inter font-bold text-[11px] text-greenmip-sage uppercase tracking-[0.06em]">
-                  {otherServices.title} {i + 1}/{otherServices.services.length}
-                </span>
-              </div>
+            <Card class="text-greenmip-forest pt-10 pb-6 px-6 flex flex-col gap-4 items-start shrink-0 w-[85%] snap-start">
+              <Tag label="{otherServices.title} {i + 1}/{otherServices.services.length}" variant="sage" />
               <h3 class="font-inter font-bold text-2xl leading-[30px] text-greenmip-forest tracking-[-0.03em]">
                 {svc.title}
               </h3>
               <p class="font-krub text-sm leading-[22px] text-greenmip-forest">
                 {svc.body}
               </p>
-            </div>
+            </Card>
           {/each}
         {/snippet}
       </Carousel>
@@ -47,14 +45,14 @@
     <!-- Cards Grid (desktop) -->
     <div class="hidden md:grid grid-cols-3 gap-6 items-stretch">
       {#each otherServices.services as svc}
-        <div class="bg-white text-greenmip-forest rounded-2xl p-7 flex flex-col gap-4 shadow-lg hover:shadow-xl transition-all duration-300 min-h-[368px] hover:-translate-y-1">
+        <Card variant="elevated" class="text-greenmip-forest p-7 flex flex-col gap-4 hover:shadow-xl transition-all duration-300 min-h-[368px] hover:-translate-y-1">
           <h3 class="font-inter font-semibold text-xl md:text-2xl text-greenmip-forest tracking-tight leading-[30px]">
             {svc.title}
           </h3>
           <p class="font-krub text-sm leading-[24px] text-greenmip-gray mt-2">
             {svc.body}
           </p>
-        </div>
+        </Card>
       {/each}
     </div>
 

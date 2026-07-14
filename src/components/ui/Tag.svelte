@@ -5,6 +5,7 @@
     olive: 'border-[0.857px] border-greenmip-olive/40 text-greenmip-olive',
     forest: 'border-[0.857px] border-greenmip-forest text-greenmip-forest',
     white: 'border border-white text-white',
+    sage: 'border-[0.75px] border-greenmip-sage text-greenmip-sage',
   };
 
   const chipVariants = {

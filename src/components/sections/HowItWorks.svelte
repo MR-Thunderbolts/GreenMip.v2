@@ -1,5 +1,6 @@
 <script>
   import Tag from '../ui/Tag.svelte';
+  import Card from '../ui/Card.svelte';
   import { howItWorks } from '../../content/howItWorks.content.js';
 </script>
 
@@ -20,7 +21,7 @@
     <!-- Steps Grid -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mt-4">
       {#each howItWorks.steps as step}
-        <div class="flex flex-col justify-between bg-white border border-greenmip-border/30 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-greenmip-sage/40 transition-all duration-300">
+        <Card variant="bordered-soft" class="flex flex-col justify-between p-6">
 
           <!-- Text Content -->
           <div class="flex flex-col gap-3 items-start mb-6">
@@ -53,7 +54,7 @@
             />
           </div>
 
-        </div>
+        </Card>
       {/each}
     </div>
 

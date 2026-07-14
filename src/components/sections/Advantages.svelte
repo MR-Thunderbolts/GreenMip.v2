@@ -1,4 +1,5 @@
 <script>
+  import Card from '../ui/Card.svelte';
   import { advantages } from '../../content/advantages.content.js';
 </script>
 
@@ -21,7 +22,7 @@
     <!-- Cards Grid -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch mt-4">
       {#each advantages.items as item}
-        <div class="bg-white text-greenmip-forest rounded-2xl px-6 py-8 flex flex-col items-center justify-center text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+        <Card variant="elevated" class="text-greenmip-forest px-6 py-8 flex flex-col items-center justify-center text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
           <div class="flex flex-col gap-3">
             <h3 class="font-inter font-semibold text-2xl md:text-[26px] text-greenmip-forest tracking-tight leading-[40px]">
               {item.title}
@@ -30,7 +31,7 @@
               {item.body}
             </p>
           </div>
-        </div>
+        </Card>
       {/each}
     </div>
 

@@ -1,5 +1,6 @@
 <script>
   import Tag from '../ui/Tag.svelte';
+  import Card from '../ui/Card.svelte';
   import Carousel from '../ui/Carousel.svelte';
   import { about } from '../../content/about.content.js';
 </script>
@@ -56,7 +57,7 @@
           href={about.advisor.linkedinUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="flex items-center gap-2 mt-4 hover:opacity-80 transition-opacity font-inter font-semibold text-greenmip-forest text-sm"
+          class="flex items-center gap-2 mt-4 hover:text-greenmip-forest/70 transition-colors duration-200 font-inter font-semibold text-greenmip-forest text-sm"
         >
           <img src="/assets/linkedin-icon.svg" alt="" class="w-4 h-4" />
           <span>Ver perfil en LinkedIn</span>
@@ -77,12 +78,8 @@
         <Carousel itemCount={about.testimonials.length} dotVariant="on-light">
           {#snippet children()}
             {#each about.testimonials as item, i}
-              <blockquote class="bg-white border border-greenmip-border rounded-2xl pt-8 pb-6 px-5 flex flex-col gap-4 shrink-0 w-[90%] snap-start">
-                <div class="inline-flex self-start px-3 py-1 rounded-full border-[0.75px] border-greenmip-sage">
-                  <span class="font-inter font-bold text-[11px] text-greenmip-sage uppercase tracking-[0.06em]">
-                    {about.testimonialsTitle} {i + 1}/{about.testimonials.length}
-                  </span>
-                </div>
+              <Card as="blockquote" variant="bordered" class="pt-8 pb-6 px-5 flex flex-col gap-4 items-start shrink-0 w-[90%] snap-start">
+                <Tag label="{about.testimonialsTitle} {i + 1}/{about.testimonials.length}" variant="sage" />
                 <p class="font-krub text-sm leading-[22px] text-greenmip-forest">
                   {item.quote}
                 </p>
@@ -96,7 +93,7 @@
                     {item.location}
                   </p>
                 </footer>
-              </blockquote>
+              </Card>
             {/each}
           {/snippet}
         </Carousel>
@@ -105,7 +102,7 @@
       <!-- Desktop: grid -->
       <div class="hidden lg:grid grid-cols-3 gap-6 items-stretch w-full">
         {#each about.testimonials as item}
-          <blockquote class="bg-white border border-greenmip-border rounded-2xl p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-all duration-300">
+          <Card as="blockquote" variant="bordered" class="p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-all duration-300">
             <p class="font-krub text-sm leading-[24px] text-greenmip-forest italic mb-6">
               {item.quote}
             </p>
@@ -119,7 +116,7 @@
                 {item.location}
               </p>
             </footer>
-          </blockquote>
+          </Card>
         {/each}
       </div>
     </div>

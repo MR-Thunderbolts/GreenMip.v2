@@ -1,5 +1,37 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui" {
+  themes: greenmip --default;
+}
+
+@plugin "daisyui/theme" {
+  name: "greenmip";
+  default: true;
+  color-scheme: light;
+  --color-base-100: #fefffb;
+  --color-base-200: #ffffff;
+  --color-base-300: #c8d3ad;
+  --color-base-content: #223f30;
+  --color-primary: #83fc88;
+  --color-primary-content: #223f30;
+  --color-secondary: #838a68;
+  --color-secondary-content: #fefffb;
+  --color-accent: #656d51;
+  --color-accent-content: #fefffb;
+  --color-neutral: #365c48;
+  --color-neutral-content: #fefffb;
+  --color-info: #656d51;
+  --color-info-content: #fefffb;
+  --color-success: #83fc88;
+  --color-success-content: #223f30;
+  --color-warning: #838a68;
+  --color-warning-content: #fefffb;
+  --color-error: #a3311f;
+  --color-error-content: #fefffb;
+  --radius-selector: 999px;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --border: 1px;
+}
 
 @theme {
   --color-greenmip-forest: #223f30;

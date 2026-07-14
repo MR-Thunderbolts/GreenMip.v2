@@ -2,7 +2,7 @@
   let { label, onclick, type = 'button', variant = 'solid' } = $props();
 
   const variants = {
-    solid: 'bg-greenmip-bright text-greenmip-forest hover:bg-greenmip-bright/80 border-none shadow-sm hover:shadow-md',
+    solid: 'bg-primary text-primary-content hover:brightness-95 border-none shadow-sm hover:shadow-md',
     ghost: 'bg-transparent text-greenmip-forest border border-greenmip-forest/20 hover:bg-greenmip-forest/5',
   };
 </script>

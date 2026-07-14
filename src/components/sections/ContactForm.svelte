@@ -11,12 +11,14 @@
   let crop = $state('');
   let hectares = $state('');
   let message = $state('');
+  let formError = $state('');
 
   function handleSubmit() {
     if (!name || !email || !region || !crop) {
-      alert('Por favor completa todos los campos requeridos (*)');
+      formError = 'Por favor completa todos los campos requeridos (*)';
       return;
     }
+    formError = '';
 
     const formattedMessage =
       `${contact.whatsappIntro}\n\n` +
@@ -59,7 +61,7 @@
           <span class="font-inter font-bold text-xs tracking-[0.06em] text-greenmip-forest uppercase">
             {contact.whatsappLabel}
           </span>
-          <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" class="font-krub font-semibold text-sm text-greenmip-forest underline underline-offset-2 hover:opacity-85 transition-opacity">
+          <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" class="font-krub font-semibold text-sm text-greenmip-forest underline underline-offset-2 hover:text-greenmip-forest/70 transition-colors duration-200">
             {CONTACT.phoneDisplay}
           </a>
         </div>
@@ -74,7 +76,7 @@
           <span class="font-inter font-bold text-xs tracking-[0.06em] text-greenmip-forest uppercase">
             {contact.emailLabel}
           </span>
-          <a href="mailto:{CONTACT.email}" class="font-krub font-semibold text-sm text-greenmip-forest underline underline-offset-2 hover:opacity-85 transition-opacity">
+          <a href="mailto:{CONTACT.email}" class="font-krub font-semibold text-sm text-greenmip-forest underline underline-offset-2 hover:text-greenmip-forest/70 transition-colors duration-200">
             {CONTACT.email}
           </a>
         </div>
@@ -185,10 +187,16 @@
           ></textarea>
         </div>
 
+        {#if formError}
+          <div class="alert alert-error text-sm py-2">
+            <span>{formError}</span>
+          </div>
+        {/if}
+
         <!-- Submit Button -->
         <button
           type="submit"
-          class="btn bg-greenmip-bright hover:bg-greenmip-bright/80 text-greenmip-forest font-semibold text-base py-2 rounded-lg border-none shadow hover:shadow-md transition-all duration-200"
+          class="btn bg-primary text-primary-content hover:brightness-95 font-semibold text-base py-2 rounded-lg border-none shadow hover:shadow-md transition-all duration-200"
         >
           {contact.submitLabel}
         </button>

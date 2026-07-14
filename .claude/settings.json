@@ -27,7 +27,9 @@
       "Read(//temp/readonly/**)",
       "Bash(curl -sf http://localhost:5191)",
       "Bash(node hero-check.mjs)",
-      "Bash(node final-qa.mjs)"
+      "Bash(node final-qa.mjs)",
+      "Bash(ls -la \"/temp/readonly/\" 2>&1 | head -20)",
+      "Read(//temp/**)"
     ]
   }
 }

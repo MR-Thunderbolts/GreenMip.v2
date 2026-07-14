@@ -5,7 +5,7 @@
   import Container from '../ui/Container.svelte';
 </script>
 
-<footer class="bg-greenmip-dark-bg relative overflow-hidden w-full py-12 md:py-16 px-4 md:px-12 lg:px-48 text-white">
+<footer class="bg-greenmip-dark-bg relative overflow-hidden w-full py-12 md:py-16 text-white">
   <!-- Background texture overlay -->
   <div
     class="absolute inset-0 z-0 pointer-events-none opacity-15"
@@ -68,8 +68,8 @@
           {footer.certificationText}
         </p>
 
-        <a href="https://ciclo17.cl" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[200px] aspect-[213/68]">
-          <img src="/assets/certification-seal.svg" alt={footer.certificationImage.alt} class="w-full h-full object-contain" loading="lazy" />
+        <a href="https://ciclo17.cl" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[200px] aspect-[400/190]">
+          <img src={footer.certificationImage.src} alt={footer.certificationImage.alt} class="w-full h-full object-contain" loading="lazy" />
         </a>
 
         <!-- Sello CO2 -->

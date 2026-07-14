@@ -1,11 +1,21 @@
 # Ambigüedades de diseño — Port V3 → V2 (revisar antes de mergear)
 
-> Generado automáticamente tras aplicar `PORT_V3_TO_V2_BRIEF.md` con un batch de agentes (uno por archivo, en paralelo) en la rama `feat/port-v3-visuals`. `npm run build` pasó limpio, y se hizo una revisión visual real en navegador (Playwright) en 3 breakpoints. Cada punto abajo es una decisión que el brief no especificaba al 100% y que un agente resolvió por criterio propio — revísalas y ajusta lo que no te convenza. **La sección "⚠️ Hallazgo (no es ambigüedad)" es un bug real encontrado en QA visual, no una decisión de diseño.**
+> Generado automáticamente tras aplicar `PORT_V3_TO_V2_BRIEF.md` con un batch de agentes (uno por archivo, en paralelo) en la rama `feat/port-v3-visuals`. `npm run build` pasó limpio, y se hizo una revisión visual real en navegador (Playwright) en 3 breakpoints. Tras una ronda de feedback visual del usuario (comparando contra capturas de Figma y el mobile original de V2), se aplicó una segunda tanda de fixes — ver "✅ Resuelto en la ronda de feedback" más abajo. El resto de los puntos sigue pendiente de tu revisión.
 
-## ⚠️ Hallazgo de QA visual (bug real, no ambigüedad)
+## ✅ Resuelto en la ronda de feedback (2026-07-14)
 
-- **`public/assets/certification-seal.svg` es en realidad una copia del sello de CO₂**, no el sello oficial de Ciclo17. Al renderizarlo standalone se ve idéntico al badge "0.3g de CO₂ por visita / Sitio web de bajo impacto ambiental" — por eso en el footer aparecen **dos badges iguales** en vez de un sello Ciclo17 distinto + el badge CO2. Este asset venía pre-copiado desde antes de este batch (commit "baseline"), el código de `Footer.svelte` (punto 10) está implementado correctamente (link a ciclo17.cl, target blank, max-width 200px) — el problema es el **contenido del SVG en sí**, no el código. **Necesitas reemplazar `public/assets/certification-seal.svg` por el sello real de Ciclo17 (distinto del ícono de CO2).**
-- Además, de paso se corrigió un bug menor de CLS (layout shift): el `<img>` del sello no reservaba espacio (`h-auto` sin `aspect-ratio`), por lo que colapsaba a 0px de alto antes de cargar. Se agregó `aspect-[213/68]` al wrapper — esto ya está corregido en el commit.
+- **Certificación del footer:** revertido a `public/assets/energy-footnote.png` (sello "Green Hosting" original), el `certification-seal.svg` duplicado del CO2 quedó sin usar en el footer.
+- **Textura del Hero:** estaba `absolute inset-0` dentro del bloque de texto en vez del `<section>` completo — corregido, ahora opacity 0.4 en toda la sección.
+- **Icono de WhatsApp:** unificado a `#1a1f16` (ink), igual que el de correo.
+- **Foto de Isaac Vera en mobile:** se había perdido el marco/padding (parte del diseño mobile original de V2) al aplicar el punto 7 sin distinguir breakpoint — restaurado en mobile, foto a sangre se mantiene solo en desktop (`lg:`).
+- **Iconos de "El problema":** 32px quedó aplicado en todos los breakpoints; se restauró a 24px en mobile (como el V2 original), 32px solo desde `lg:`.
+- **Ambigüedades #9 y #10 (overrides de Tag/Card):** resueltas agregando la variante `bordered-sage` a `Card.svelte` y `sage-outline` a `Tag.svelte`, en vez de mantener los overrides locales en `AboutTestimonials.svelte`.
+- **Ambigüedad #18 (padding horizontal duplicado):** se quitó `px-4 md:px-12 lg:px-48` de `OtherServices.svelte`, `Advantages.svelte` y `Footer.svelte`, unificando el criterio con `ServicesGPS.svelte`/`Problem.svelte` (ancho completo en desktop).
+- **"Llamar ahora" del Hero:** bajado de contraste a pedido del usuario.
+- **"Cómo funciona" paso 02 con título duplicado:** investigado — el código y el contenido eran correctos; fue un artefacto de HMR (hot-reload) de la sesión del navegador del usuario mientras los agentes editaban en vivo, no un bug real.
+
+## Pendiente — imagen de reemplazo
+El usuario pidió usar una imagen de placeholder que existía antes de incorporar el archivo de Figma, para una de las secciones. No se encontró un commit con un placeholder distinto en el historial de git (todas las fotos actuales ya estaban en el primer commit) — **queda pendiente que el usuario indique la sección exacta y suba el archivo.**
 
 ## Navbar.svelte
 1. **Menú móvil (hamburger) no se tocó.** Se aplicó Krub/Inter + color `text-ink` a los links de desktop, pero el dropdown móvil se dejó con `text-greenmip-forest`/`font-semibold` porque el brief hablaba de "nav links" sin distinguir mobile/desktop y el foco explícito (B2) era el CTA de desktop. **Revisar si quieres el mismo tratamiento en el menú móvil.**

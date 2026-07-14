@@ -20,11 +20,11 @@
 
   <div class="relative z-1">
     <Container>
-      <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-24 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-24 items-center lg:items-stretch">
 
-        <!-- Image (Left side on desktop) -->
-        <div class="flex justify-center items-center">
-          <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+        <!-- Image (Left side on desktop): stretches to match text column height on desktop -->
+        <div class="flex justify-center items-center lg:items-stretch">
+          <div class="relative w-full aspect-video lg:aspect-auto lg:h-full rounded-2xl overflow-hidden shadow-2xl border border-white/10">
             <img
               src={services.image.src}
               alt={services.image.alt}

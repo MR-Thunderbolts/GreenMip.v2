@@ -9,11 +9,11 @@
 
   <div class="absolute inset-0 z-0 pointer-events-none opacity-40 bg-cover bg-center" style="background-image: url('/assets/hero-bg-texture.svg');"></div>
 
-  <div class="lg:container lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center lg:px-12 lg:pt-24 lg:pb-24 relative z-10">
+  <div class="lg:container lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-24 lg:items-stretch lg:px-12 lg:pt-32 lg:pb-24 relative z-10">
 
-    <!-- Hero Image: true full-bleed on mobile (absolute, behind floating navbar), contained + rounded on desktop -->
-    <div class="absolute top-0 left-0 w-full h-[340px] lg:static lg:h-auto lg:flex lg:justify-center lg:items-center lg:order-1">
-      <div class="relative w-full h-full lg:aspect-[503/461] lg:max-w-[503px] overflow-hidden lg:rounded-2xl lg:shadow-2xl lg:border lg:border-white/10">
+    <!-- Hero Image: true full-bleed on mobile (absolute, behind floating navbar), contained + rounded on desktop (stretches to match text column height) -->
+    <div class="absolute top-0 left-0 w-full h-[340px] lg:static lg:h-auto lg:flex lg:justify-center lg:items-stretch lg:order-1">
+      <div class="relative w-full h-full lg:aspect-auto lg:max-w-[503px] overflow-hidden lg:rounded-2xl lg:shadow-2xl lg:border lg:border-white/10">
         <img
           src={hero.image.src}
           alt={hero.image.alt}

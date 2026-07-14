@@ -12,10 +12,10 @@
     <!-- Row 1: About Advisor -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-      <!-- Photo side (Left on desktop): framed card on mobile (V2 original), flush single image on desktop (paridad V3) -->
+      <!-- Photo side (Left on desktop): framed card at every breakpoint (V2 original / Figma photo-frame) -->
       <div class="flex justify-center w-full">
-        <div class="border border-greenmip-forest/20 p-4 rounded-2xl shadow-inner w-full lg:p-0 lg:border-0 lg:shadow-none lg:rounded-3xl">
-          <div class="rounded-2xl overflow-hidden border border-[#e5e7eb] aspect-[423/383] w-full lg:rounded-3xl">
+        <div class="border border-greenmip-sage p-4 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.08)] w-full">
+          <div class="rounded-2xl overflow-hidden border border-[#e5e7eb] aspect-[423/383] w-full">
             <img
               src={about.advisor.photo.src}
               alt={about.advisor.photo.alt}

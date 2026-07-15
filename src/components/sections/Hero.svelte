@@ -34,7 +34,7 @@
       </div>
 
       <!-- Title (H1) -->
-      <h1 class="relative z-10 font-inter font-bold text-[44px] md:text-[56px] leading-[48px] md:leading-[64px] text-white tracking-tight">
+      <h1 class="relative z-10 font-inter font-bold text-[32px] md:text-[40px] leading-[1.1] text-white tracking-[-1px]">
         {hero.title}
       </h1>
 

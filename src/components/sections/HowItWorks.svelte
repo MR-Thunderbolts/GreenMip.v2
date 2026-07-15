@@ -9,9 +9,7 @@
 
     <!-- Section Header -->
     <div class="flex flex-col gap-4 items-start max-w-[500px]">
-      <span class="font-inter font-bold text-[10px] uppercase tracking-[0.05em] text-[#365C48]">
-        {howItWorks.eyebrow}
-      </span>
+      <Tag label={howItWorks.eyebrow} />
       <h2 class="font-inter font-bold text-[32px] md:text-[40px] leading-[1.1] text-ink tracking-[-1px]">
         {howItWorks.title}
       </h2>

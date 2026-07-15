@@ -1,10 +1,20 @@
 <script>
+  import { onMount } from 'svelte';
   import { scrollToSection } from '../../lib/scroll.js';
   import { navbar } from '../../content/navbar.content.js';
   import Icon from '../ui/Icon.svelte';
 
   let activeSection = $state(navbar.links[0].id);
   let mobileMenuOpen = $state(false);
+  let isScrolled = $state(false);
+
+  onMount(() => {
+    const handleScroll = () => {
+      isScrolled = window.scrollY > 20;
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  });
 
   function setActive(id) {
     activeSection = id;
@@ -16,13 +26,17 @@
     mobileMenuOpen = false;
     setTimeout(() => scrollToSection(id), 150);
   }
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 </script>
 
-<div class="fixed top-3 inset-x-0 z-50 px-3 md:px-8">
+<div class="fixed inset-x-0 z-50 px-3 md:px-8 transition-[top] duration-300 {isScrolled ? 'top-3' : 'top-6 md:top-8'}">
   <div class="navbar bg-white shadow-lg rounded-lg px-4 md:px-8 py-2 max-w-[1200px] mx-auto transition-all duration-300 flex-nowrap justify-between gap-3">
     <div class="navbar-start flex-none w-auto">
       <!-- Logo -->
-      <a href="#hero" onclick={(e) => { e.preventDefault(); setActive('hero'); }} class="flex items-center cursor-pointer transition-transform duration-200 hover:scale-105">
+      <a href="#hero" onclick={(e) => { e.preventDefault(); scrollToTop(); }} class="flex items-center cursor-pointer transition-transform duration-200 hover:scale-105">
         <img src={navbar.logo.src} alt={navbar.logo.alt} class="h-7 md:h-9 w-auto max-w-[130px] md:max-w-none object-contain" />
       </a>
     </div>

@@ -38,6 +38,10 @@
 }
 
 @theme {
+  /* Motion base compartida: misma curva de easing en toda transición del proyecto
+     (mismo cubic-bezier que el efecto de scroll del navbar) */
+  --default-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --color-greenmip-forest: #223f30;
   --color-greenmip-bright: #83fc88;
   --color-greenmip-sage: #838a68;
@@ -70,7 +74,7 @@ body {
 }
 
 section[id] {
-  scroll-margin-top: 110px; /* B3: aire bajo navbar sticky, como V3 scroll-padding-top */
+  scroll-margin-top: 130px; /* B3: aire bajo navbar sticky, como V3 scroll-padding-top */
 }
 
 /* Scrollbar styling */

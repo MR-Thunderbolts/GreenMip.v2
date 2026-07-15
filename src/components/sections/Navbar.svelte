@@ -1,28 +1,67 @@
 <script>
-  import { scrollToSection } from '../../lib/scroll.js';
+  import { onMount } from 'svelte';
+  import { scrollToSection, scrollToTop } from '../../lib/scroll.js';
   import { navbar } from '../../content/navbar.content.js';
   import Icon from '../ui/Icon.svelte';
 
-  let activeSection = $state(navbar.links[0].id);
+  let activeSection = $state('');
   let mobileMenuOpen = $state(false);
+  let isScrolled = $state(false);
+
+  onMount(() => {
+    const handleScroll = () => {
+      isScrolled = window.scrollY > 20;
+    };
+    window.addEventListener('scroll', handleScroll);
+
+    // Sección activa según lo que realmente está visible en el viewport,
+    // no según el último link clickeado (así el logo -> top también la limpia)
+    const sectionIds = navbar.links.map((link) => link.id);
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((el) => el !== null);
+
+    const visible = new Set();
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            visible.add(entry.target.id);
+          } else {
+            visible.delete(entry.target.id);
+          }
+        });
+
+        activeSection = sectionIds.find((id) => visible.has(id)) ?? '';
+      },
+      { rootMargin: '-30% 0px -60% 0px' }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      observer.disconnect();
+    };
+  });
 
   function setActive(id) {
-    activeSection = id;
     scrollToSection(id);
   }
 
   function setActiveFromMenu(id) {
-    activeSection = id;
     mobileMenuOpen = false;
     setTimeout(() => scrollToSection(id), 150);
   }
+
 </script>
 
-<div class="fixed top-3 inset-x-0 z-50 px-3 md:px-8">
+<div class="fixed inset-x-0 z-50 px-3 md:px-8 transition-[top] duration-300 {isScrolled ? 'top-3' : 'top-6 md:top-8'}">
   <div class="navbar bg-white shadow-lg rounded-lg px-4 md:px-8 py-2 max-w-[1200px] mx-auto transition-all duration-300 flex-nowrap justify-between gap-3">
     <div class="navbar-start flex-none w-auto">
       <!-- Logo -->
-      <a href="#hero" onclick={(e) => { e.preventDefault(); setActive('hero'); }} class="flex items-center cursor-pointer transition-transform duration-200 hover:scale-105">
+      <a href="#hero" onclick={(e) => { e.preventDefault(); scrollToTop(); }} class="flex items-center cursor-pointer transition-transform duration-200 hover:scale-105">
         <img src={navbar.logo.src} alt={navbar.logo.alt} class="h-7 md:h-9 w-auto max-w-[130px] md:max-w-none object-contain" />
       </a>
     </div>
@@ -35,14 +74,14 @@
             <a
               href="#{link.id}"
               onclick={(e) => { e.preventDefault(); setActive(link.id); }}
-              class="flex items-center gap-2 text-ink hover:text-ink/80 font-krub font-medium text-sm transition-all duration-200 cursor-pointer relative py-2"
+              class="flex items-center gap-2 font-krub text-sm cursor-pointer relative py-2 transition-colors duration-300 {activeSection === link.id ? 'text-ink' : 'text-ink/70 hover:text-ink'}"
             >
-              {#if activeSection === link.id}
-                <img src="/assets/dot-active.svg" alt="" class="w-1.5 h-1.5 animate-pulse" />
-                <span class="font-krub font-bold text-ink">{link.label}</span>
-              {:else}
-                <span class="font-krub font-medium text-ink/70 hover:text-ink">{link.label}</span>
-              {/if}
+              <img
+                src="/assets/dot-active.svg"
+                alt=""
+                class="w-1.5 h-1.5 shrink-0 transition-all duration-300 {activeSection === link.id ? 'opacity-100 scale-100' : 'opacity-0 scale-0'}"
+              />
+              <span class="font-krub {activeSection === link.id ? 'font-bold' : 'font-medium'}">{link.label}</span>
             </a>
           </li>
         {/each}
@@ -88,11 +127,13 @@
           <a
             href="#{link.id}"
             onclick={(e) => { e.preventDefault(); setActiveFromMenu(link.id); }}
-            class="w-full text-center py-2.5 px-3 rounded-lg flex items-center justify-center gap-2 font-krub text-base transition-colors duration-200 hover:bg-greenmip-light-bg {activeSection === link.id ? 'font-bold text-ink' : 'font-medium text-ink/80'}"
+            class="w-full text-center py-2.5 px-3 rounded-lg flex items-center justify-center gap-2 font-krub text-base transition-colors duration-300 hover:bg-greenmip-light-bg {activeSection === link.id ? 'font-bold text-ink' : 'font-medium text-ink/80'}"
           >
-            {#if activeSection === link.id}
-              <img src="/assets/dot-active.svg" alt="" class="w-1.5 h-1.5" />
-            {/if}
+            <img
+              src="/assets/dot-active.svg"
+              alt=""
+              class="w-1.5 h-1.5 shrink-0 transition-all duration-300 {activeSection === link.id ? 'opacity-100 scale-100' : 'opacity-0 scale-0'}"
+            />
             {link.label}
           </a>
         </li>
